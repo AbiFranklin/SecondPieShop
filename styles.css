@@ -22,13 +22,6 @@ h1 {
   font-family: WorkSansBold;
 }
 
-/* #wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-} */
-
 #main-header {
   background-color: #c87d52;
 }
@@ -97,6 +90,34 @@ td {
   font-weight: bold;
   font-size: 1.1em;
   letter-spacing: .2em;
+}
+
+nav>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav>ul>li {
+  height: 80px;
+  float: left;
+  display: flex;
+}
+
+nav>ul>li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: WorkSansRegular;
+  display: flex;
+  align-items: center;
+}
+
+nav>ul>li a:hover {
+  color: #ffd0c9;
 }
 
 
