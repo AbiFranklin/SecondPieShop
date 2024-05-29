@@ -29,6 +29,8 @@
     <main id="main">
       <h1>Contact Us</h1>
       <form method="post" action="contact.html" id="contactForm">
+        <fieldset>
+          <legend>Your Information</legend>
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" placeholder="Enter your first name"></input><br>
         <label for="lastName">Last Name</label>
@@ -44,8 +46,10 @@
         </select><br><br>
 
         <label for="birthday">Birthday</label>
-        <input type="date" id="birthday" name="birthday"><br><br>
+        <input type="date" id="birthday" name="birthday"><br><br></fieldset>
 
+        <fieldset>
+          <legend>Subject</legend>
         <label>I have a...</label><br>
         <input type="radio" id="question" name="contactReason" value="Question" checked>
         <label for="question">Question</label><br>
@@ -55,7 +59,7 @@
         <label for="order">Order</label><br><br>
 
         <label for="question">Additional Information</label><br>
-        <textarea id="question" name="question" placeholder="Type here..." style="height:150px"></textarea><br><br>
+        <textarea id="question" name="question" placeholder="Type here..." style="height:150px"></textarea><br><br></fieldset>
         <input type="submit" value="Submit">
       </form>
     </main>
