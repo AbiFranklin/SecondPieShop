@@ -16,6 +16,12 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 2em;
+  color: #c87d52;
+  font-family: WorkSansBold;
+}
+
 /* #wrapper {
   display: flex;
   flex-direction: column;
@@ -74,13 +80,27 @@ footer {
   margin-top: 10px;
 }
 
-
-
-h1 {
-  font-size: 2em;
-  color: #c87d52;
-  font-family: WorkSansBold;
+table,td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
 }
+td {
+  text-align: center;
+}
+
+.page-header-small {
+  font-family: WorkSansRegular;
+  color: black;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: .2em;
+}
+
+
+
 
 h2,
 h3,
