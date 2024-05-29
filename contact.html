@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/Assets/m7/favicon.png">
+  <title>Welcome to Bethany's Pie Shop!</title>
+</head>
+
+<body>
+  <header id="main-header">
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="Assets/m7/images/logos/bethany-horizontal-logo.png"
+              alt="Bethany's Pie Shop Logo" class="menu-logo" /></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pieoverview.html">Pies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main-content">
+    <aside id="left-menu">
+      <img src="Assets/m7/images/logos/bethany-badge-logo.png" alt="Bethany's Pie Shop Badge Logo" width="150px" />
+      <p class="aside-header"><a href="pieoverview.html">Browse our pies</a></p>
+    </aside>
+    <main id="main">
+      <h1>Contact Us</h1>
+      <form method="post" action="contact.html" id="contactForm">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name"></input><br>
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name"></input>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="Begium" selected>Belgium</option>
+          <option value="England">England</option>
+          <option value="USA">USA</option>
+        </select><br><br>
+
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday"><br><br>
+
+        <label>I have a...</label><br>
+        <input type="radio" id="question" name="contactReason" value="Question" checked>
+        <label for="question">Question</label><br>
+        <input type="radio" id="comment" name="contactReason" value="Comment">
+        <label for="comment">Comment</label><br>
+        <input type="radio" id="order" name="contactReason" value="Order">
+        <label for="order">Order</label><br><br>
+
+        <label for="question">Additional Information</label><br>
+        <textarea id="question" name="question" placeholder="Type here..." style="height:150px"></textarea><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </main>
+  </div>
+  <div id="wrapper">
+    <footer>
+      <p>Our address is
+      <address>Bethany's Pie Shop - Bakery Street 555 Brussels Belgium</address>
+      </p>
+      <small>2024 Bethany's Pie Shop - All rights reserved &copy;</small>
+    </footer>
+  </div>
+  <script>
+    function getData(form) {
+      var formData = new FormData(form);
+      var data = '';
+
+      for (var pair of formData.entries()) {
+        data += pair[0] + ": " + pair[1] + "\n";
+      }
+
+      alert(data);
+
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      getData(e.target);
+    });
+
+  </script>
+
+</body>
+
+</html>
