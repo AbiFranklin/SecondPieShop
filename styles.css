@@ -193,3 +193,7 @@ legend {
   font-family: WorkSansRegular;
   text-transform: uppercase;
 }
+
+#favorite {
+  height: 20px;
+}

@@ -7,6 +7,42 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="/Assets/m7/favicon.png">
   <title>Welcome to Bethany's Pie Shop!</title>
+  <script>
+    const saveAsFavorite = (isFavorite) => {
+      localStorage.setItem("applepie", isFavorite);
+      updateFavoriteMessage();
+    };
+
+    const removeFromFavorites = () => {
+      localStorage.removeItem("applepie");
+      updateFavoriteMessage();
+    };
+
+    const updateFavoriteMessage = () => {
+      const favorite = document.getElementById("favorite");
+      if (window.localStorage) {
+        const applePieFavorite = localStorage.getItem('applepie') === 'true';
+        favorite.innerHTML = applePieFavorite ? "Apple Pie is one of your favorites" : '';
+      }
+    };
+
+    window.onload = () => {
+      const favoriteButton = document.getElementById("favoriteButton");
+      const removeButton = document.getElementById("removeButton");
+
+      updateFavoriteMessage();
+
+      if (favoriteButton) {
+        favoriteButton.addEventListener("click", () => {
+          saveAsFavorite(true);
+        });
+      }
+
+      if (removeButton) {
+        removeButton.addEventListener("click", removeFromFavorites);
+      }
+    };
+  </script>
 </head>
 
 <body>
@@ -35,6 +71,9 @@
           <img src="images/products/fruitpies/apple-pie-small.jpg" width="600" alt="Apple pie" />
           <figcaption>Our world-famous apple pie</figcaption>
         </figure>
+        <button type="button" id="favoriteButton">Save as Favorite</button>
+        <button type="button" id="removeButton">Remove from Favorite</button><br><br>
+        <span id="favorite"></span>
 
         <div>
           <strong>Price: $12.95</strong>
